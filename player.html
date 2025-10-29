@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DİLKOÇUM • Oynatıcı</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="DİLKOÇUM Ana Sayfa">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="title">DİLKOÇUM</span>
+      </a>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="player-page" id="player-page-main">
+    <div class="video-player-container reveal" id="video-player-container">
+
+      <div class="video-aspect-wrapper">
+        <video controls autoplay muted id="video-player">Tarayıcınız video etiketini desteklemiyor.</video>
+      </div>
+
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="quality-selector" id="quality-selector" role="toolbar" aria-label="Video kalitesini seçin">
+        </div>
+
+      <h2 id="video-title">Video Başlığı Yükleniyor...</h2>
+      <p id="video-description">Açıklama yükleniyor...</p>
+    </div>
+  </main>
+
+  <script src="videos.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

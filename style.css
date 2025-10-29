@@ -1,0 +1,434 @@
+/* ==========================================================
+   DİLKOÇUM – PROFESYONEL & TEMİZ SÜRÜM
+   ========================================================== */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+/* ==========================================================
+   TEMALAR (Light / Dark)
+   ========================================================== */
+
+:root {
+  /* Ana Renkler */
+  --primary: #007aff;
+  --ok: #23c483;
+
+  /* Light Tema (Varsayılan) */
+  --bg-0: #f8f9fb;      /* ana arka plan */
+  --bg-1: #ffffff;      /* kart arka planı */
+  --bg-1-rgb: 255,255,255; /* header şeffaflığı için */
+  --bg-2: #f1f4f9;      /* hover arka planı */
+
+  --text-1: #0d1220;    /* başlık */
+  --text-2: #2b3242;    /* metin */
+  --text-3: #6b7386;    /* sönük */
+
+  --border: rgba(0, 0, 0, 0.08); /* Net kenarlık */
+
+  /* Profesyonel Gölgeler */
+  --shadow-1: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Diğer */
+  --radius-sm: 8px;
+  --radius-lg: 12px; /* Daha yumuşak kenarlar */
+  --speed: .3s ease;
+}
+
+:root[data-theme="dark"] {
+  --bg-0: #111317;
+  --bg-1: #1a1d22;
+  --bg-1-rgb: 26, 29, 34; /* header şeffaflığı için */
+  --bg-2: #252930;
+
+  --text-1: #f0f3f8;
+  --text-2: #bec6d5;
+  --text-3: #8a93a6;
+
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================
+   GENEL
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg-0); /* Sade arka plan */
+  color: var(--text-2);
+  line-height: 1.65; /* Artan okunabilirlik */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reveal (scroll animasyon) - Bu kod temizdi, korundu */
+.reveal {
+  opacity: 1;
+  transform: translateY(18px) scale(.98);
+  transition: .6s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  /* Şeffaf arka plan, hem light hem dark modda çalışır */
+  background: rgba(var(--bg-1-rgb), 0.85);
+  border-bottom: 1px solid var(--border); /* Renkli stroke yerine net kenarlık */
+}
+
+.header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  
+  /* --- BU PROFESYONEL ÇÖZÜMDÜR --- */
+  
+  /* 1. Header çubuğuna sabit bir yükseklik veriyoruz */
+  height: 72px; /* (Bunu isterseniz 80px de yapabilirsiniz) */
+
+  /* 2. Dikey 'padding'i kaldırıyoruz, çünkü 'height' artık kontrolü aldı.
+     Sadece yatay 'padding' kalıyor. */
+  padding: 0 24px; 
+  
+  /* --- (Çözüm Sonu) --- */
+
+  display: flex;
+  align-items: center; /* Bu kural, logoyu dikeyde mükemmel ortalayacak */
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand .logo-img {
+  /* 1. 'height' yerine 'max-height' kullanıyoruz. */
+  /* Logo, 72px'lik header'ın içinde (biraz boşluk bırakarak) 
+     en fazla 52px yüksekliğe ulaşabilir. */
+  max-height: 100px; 
+  
+  width: auto;  /* Orantıyı koru */
+  transition: .3s ease;
+  
+  /* (Bonus: Bu, logonun dar ekranlarda ezilmesini engeller) */
+  flex-shrink: 0; 
+}
+}
+:root[data-theme="dark"] .brand .logo-img {
+  filter: invert(1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--bg-1);
+  color: var(--text-2);
+  padding: 8px 12px;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background var(--speed), transform var(--speed);
+}
+.theme-toggle:hover {
+  background: var(--bg-2);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================
+   HERO (index)
+   ========================================================== */
+.hero {
+  max-width: 1320px;
+  margin: 32px auto 24px;
+  padding: 0 24px 16px;
+}
+.hero .kicker {
+  font-size: .9rem;
+  color: var(--text-3);
+  padding: 6px 12px;
+  border: 1px solid var(--border); /* Dashed yerine düz çizgi */
+  border-radius: 999px;
+  background: var(--bg-1);
+}
+.hero h1 {
+  margin: 16px 0 8px;
+  color: var(--text-1);
+  font-size: clamp(2.2rem, 4vw, 3rem); /* Daha güçlü başlık */
+  font-weight: 800;
+  letter-spacing: -.5px;
+}
+.hero p {
+  margin: 8px 0 0;
+  color: var(--text-2);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================
+   MAIN WRAPPER
+   ========================================================== */
+main {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+
+/* Section başlık */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-1);
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary);
+  margin: 24px 0 24px;
+  /* Accent line (::after) kaldırıldı */
+}
+
+/* ==========================================================
+   VIDEO GRID + CARD
+   ========================================================== */
+.video-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+}
+
+.video-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-1); /* Sade arkaplan */
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text-2);
+  box-shadow: var(--shadow-1);
+  transition: transform var(--speed), box-shadow var(--speed), border-color var(--speed);
+  display: flex;
+  flex-direction: column;
+}
+.video-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border);
+  box-shadow: var(--shadow-2);
+  /* Gradient arkaplan kaldırıldı */
+}
+
+/* Cam yansıması (::before) efekti kaldırıldı */
+
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  overflow: hidden;
+  /* Kenarlıklar artık ana kartta */
+}
+.thumbnail-container img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--speed);
+}
+.video-card:hover .thumbnail-container img {
+  transform: scale(1.05);
+}
+
+/* Play icon (SVG'li temiz versiyon korundu) */
+.thumbnail-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px; /* Biraz daha küçük ve net */
+  height: 64px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(.9);
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6); /* Daha net arkaplan */
+  transition: transform var(--speed), opacity var(--speed);
+  backdrop-filter: blur(4px);
+
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M8 5v14l11-7z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center 51%;
+  background-size: 38%;
+  /* Gölge kaldırıldı */
+}
+.video-card:hover .thumbnail-container::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.video-card-content {
+  padding: 20px 22px 22px; /* Artan boşluk */
+  flex-grow: 1;
+}
+.video-card-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-1);
+}
+.video-card-content p {
+  margin: 0;
+  color: var(--text-3);
+  font-size: .95rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   PLAYER SAYFASI
+   ========================================================== */
+.player-page {
+  padding-top: 24px;
+}
+.video-player-container {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.video-aspect-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: var(--radius-lg);
+  background: #000;
+  overflow: hidden;
+  box-shadow: var(--shadow-2); /* Daha belirgin gölge */
+}
+.video-aspect-wrapper video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Quality bar */
+.quality-selector {
+  margin: 16px 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.quality-btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-1); /* Sade arkaplan */
+  color: var(--text-2);
+  cursor: pointer;
+  font-weight: 500; /* 600 yerine 500 */
+  letter-spacing: .2px;
+  transition: all var(--speed);
+}
+.quality-btn:hover {
+  background: var(--bg-2);
+  transform: translateY(-1px);
+}
+.quality-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  /* Gölge kaldırıldı */
+}
+
+/* Title & description */
+.video-player-container h2 {
+  margin: 20px 0 8px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--text-1);
+  font-weight: 700;
+}
+.video-player-container p {
+  margin: 8px 0 18px;
+  color: var(--text-2);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Progress bar (izleme ilerlemesi) */
+.progress-wrap {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border); /* Daha belirgin arkaplan */
+  overflow: hidden;
+  margin: 16px 0 8px;
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: var(--primary); /* Sade renk */
+  transition: width .2s linear;
+}
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-0);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 999px;
+  border: 2px solid var(--bg-0); /* Daha iyi görünüm */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 20px;
+  }
+  .header-inner {
+    padding: 12px 16px;
+  }
+  main, .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .video-grid {
+    gap: 16px;
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+  }
+}
