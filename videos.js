@@ -11,4 +11,5 @@ const videoListesi = [
       "1080p": "https://res.cloudinary.com/djxnkhurm/video/upload/v1761778834/ders1_1080p_fslhpf.mp4"
     }
   }
+
 ];
