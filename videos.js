@@ -17,7 +17,7 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders2.png", 
     videoFiles: {
-      "1080p": "https://pixeldrain.com/u/iGjRNto3"
+      "1080p": "https://pixeldrain.com/u/gY6EX5o7"
     }
   },
   {
@@ -30,4 +30,5 @@ const videoListesi = [
     }
   }
 ];
+
 
