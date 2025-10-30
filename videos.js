@@ -26,7 +26,8 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders3.png",
     videoFiles: {
-      "1080p": "https://pixeldrain.com/u/iGjRNto3"
+      "1080p": "https://pixeldrain.com/u/RSkpJKi2"
     }
   }
 ];
+
