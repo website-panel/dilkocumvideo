@@ -13,7 +13,7 @@ const videoListesi = [
   },
    {
     id: 2,
-    title: "Ders 2: 30.10.2025,
+    title: "Ders 2: 30.10.2025,"
     description: "",
     thumbnail: "thumbnails/ders2.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
@@ -22,7 +22,7 @@ const videoListesi = [
 },
   {
     id: 3,
-    title: "Ders 3: 30.10.2025,
+    title: "Ders 3: 30.10.2025,"
     description: "",
     thumbnail: "thumbnails/ders3.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
@@ -30,6 +30,7 @@ const videoListesi = [
     }
 }
 ];
+
 
 
 
