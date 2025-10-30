@@ -8,8 +8,9 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders1.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
-      "1080p": "https://res.cloudinary.com/djxnkhurm/video/upload/v1761778834/ders1_1080p_fslhpf.mp4"
+      "1080p": "https://youtu.be/ibfDrRFgt70"
     }
   }
 
 ];
+
