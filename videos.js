@@ -8,11 +8,12 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders1.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
-      "1080p": "https://pixeldrain.com/api/file/iGjRNto3"
+      "1080p": "https://pixeldrain.com/u/iGjRNto3"
     }
   }
 
 ];
+
 
 
 
