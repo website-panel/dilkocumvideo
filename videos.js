@@ -15,7 +15,7 @@ const videoListesi = [
     id: 2,
     title: "Ders 2: 30.10.2025,
     description: "",
-    thumbnail: "thumbnails/ders1.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
+    thumbnail: "thumbnails/ders2.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
       "1080p": "https://pixeldrain.com/u/iGjRNto3"
     }
@@ -24,12 +24,13 @@ const videoListesi = [
     id: 3,
     title: "Ders 3: 30.10.2025,
     description: "",
-    thumbnail: "thumbnails/ders1.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
+    thumbnail: "thumbnails/ders3.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
       "1080p": "https://pixeldrain.com/u/iGjRNto3"
     }
 }
 ];
+
 
 
 
