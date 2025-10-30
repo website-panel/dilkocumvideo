@@ -8,7 +8,7 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders1.png", 
     videoFiles: {
-      "1080p": "https://pixeldrain.com/u/iGjRNto3"
+      "1080p": "https://pixeldrain.com/api/file/iGjRNto3"
     }
   },
   {
@@ -17,7 +17,7 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders2.png", 
     videoFiles: {
-      "1080p": "https://pixeldrain.com/u/gY6EX5o7"
+      "1080p": "https://pixeldrain.com/api/file/gY6EX5o7"
     }
   },
   {
@@ -26,9 +26,10 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders3.png",
     videoFiles: {
-      "1080p": "https://pixeldrain.com/u/RSkpJKi2"
+      "1080p": "https://pixeldrain.com/api/file/RSkpJKi2"
     }
   }
 ];
+
 
 
