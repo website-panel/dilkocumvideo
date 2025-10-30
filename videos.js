@@ -8,9 +8,10 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders1.png", // BU YOLUN DOĞRU OLDUĞUNDAN EMİN OLUN
     videoFiles: {
-      "1080p": "https://youtu.be/ibfDrRFgt70"
+      "1080p": "https://www.youtube.com/embed/ibfDrRFgt70?si=xmWfw6j0H8oGUUgi"
     }
   }
 
 ];
+
 
