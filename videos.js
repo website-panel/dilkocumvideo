@@ -28,8 +28,9 @@ const videoListesi = [
     videoFiles: {
       "1080p": "https://pixeldrain.com/u/iGjRNto3"
     }
-},
+}
 ];
+
 
 
 
