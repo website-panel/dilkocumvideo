@@ -53,10 +53,11 @@ const videoListesi = [
     description: "",
     thumbnail: "thumbnails/ders2.png", 
     videoFiles: {
-      "1080p": "https://pixeldrain.com/api/file/nWqXgneK"
+      "1080p": "https://pixeldrain.com/api/file/xBB3uMgB"
     }
   }
 ];
+
 
 
 
