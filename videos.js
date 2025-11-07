@@ -28,8 +28,36 @@ const videoListesi = [
     videoFiles: {
       "1080p": "https://pixeldrain.com/api/file/RSkpJKi2"
     }
+  },
+   {
+    id: 4,
+    title: "Dialogue Questions", // DÜZELTME: Kapanış tırnak işareti (") ve virgül (,) eklendi.
+    description: "",
+    thumbnail: "thumbnails/ders2.png", 
+    videoFiles: {
+      "1080p": "https://pixeldrain.com/u/nWqXgneK"
+    }
+  },
+  {
+    id: 5,
+    title: "Restatement (paraphrazing) Questions", // DÜZELTME: Kapanış tırnak işareti (") ve virgül (,) eklendi.
+    description: "",
+    thumbnail: "thumbnails/ders2.png", 
+    videoFiles: {
+      "1080p": "https://pixeldrain.com/u/62tkWnEV"
+    }
+  },
+  {
+    id: 6,
+    title: "Paragraph Completion Questions", // DÜZELTME: Kapanış tırnak işareti (") ve virgül (,) eklendi.
+    description: "",
+    thumbnail: "thumbnails/ders2.png", 
+    videoFiles: {
+      "1080p": "https://pixeldrain.com/u/nWqXgneK"
+    }
   }
 ];
+
 
 
 
