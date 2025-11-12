@@ -55,8 +55,18 @@ const videoListesi = [
     videoFiles: {
       "1080p": "https://pixeldrain.com/api/file/xBB3uMgB"
     }
+  },
+  {
+    id: 7,
+    title: "Vocabulary Test", // DÜZELTME: Kapanış tırnak işareti (") ve virgül (,) eklendi.
+    description: "",
+    thumbnail: "thumbnails/ders2.png", 
+    videoFiles: {
+      "1080p": "https://pixeldrain.com/api/file/2TVEWenW"
+    }
   }
 ];
+
 
 
 
